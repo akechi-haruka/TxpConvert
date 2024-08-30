@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "Extract": {
+      "commandName": "Project",
+      "commandLineArgs": "extract -v --v-flip L:\\SDVX\\kantai7\\rom\\sprite\\spr_gam_info\\texture.bin L:\\SDVX\\kantai7\\rom\\sprite\\spr_gam_info\\"
+    },
+    "Create": {
+      "commandName": "Project",
+      "commandLineArgs": "create -f BC7 -v SetWithSubsets L:\\SDVX\\kantai7\\rom\\sprite\\spr_adv_cmn L:\\SDVX\\kantai7\\rom\\sprite\\spr_adv_cmn\\texture_repack.bin"
+    },
+    "Extract Repack": {
+      "commandName": "Project",
+      "commandLineArgs": "extract -v --v-flip L:\\SDVX\\kantai7\\rom\\sprite\\spr_adv_cmn\\texture_repack.bin L:\\SDVX\\kantai7\\rom\\sprite\\spr_adv_cmn\\r"
+    }
+  }
+}
