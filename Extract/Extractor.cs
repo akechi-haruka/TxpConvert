@@ -43,6 +43,8 @@ namespace TxpConvert.Extract {
                 metadata.Write("Index", txp.Index, section);
                 metadata.Write("HFlip", opts.HFlip, section);
                 metadata.Write("VFlip", opts.VFlip, section);
+                metadata.Write("SubSetInfo", txp.SubSetInfo, section);
+                metadata.Write("SubSetIndex", txp.SubSetIndex, section);
             }
 
             return 0;

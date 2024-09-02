@@ -39,6 +39,8 @@ namespace TxpConvert.Create {
                 uint index = UInt32.Parse(metadata.Read("Index", section));
                 bool hflip = Boolean.Parse(metadata.Read("HFlip", section));
                 bool vflip = Boolean.Parse(metadata.Read("VFlip", section));
+                uint subsetinfo = UInt32.Parse(metadata.Read("SubSetInfo", section));
+                int subsetindex = Int32.Parse(metadata.Read("SubSetIndex", section));
 
                 String fn = Path.Combine(opts.InFolder, i + ".dds");
                 if (!File.Exists(fn)) {
@@ -57,7 +59,10 @@ namespace TxpConvert.Create {
                         format = opts.OverrideFormat;
                     }
 
-                    images[i] = new TXP(width, height, format, index, pixels);
+                    images[i] = new TXP(width, height, format, index, pixels) {
+                        SubSetInfo = subsetinfo,
+                        SubSetIndex = subsetindex
+                    };
 
                 }
             }

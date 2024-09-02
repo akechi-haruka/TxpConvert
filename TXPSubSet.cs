@@ -28,7 +28,7 @@ namespace TxpConvert {
             Info = reader.ReadUInt32();
             MipmapCount = Info & 0xFF;
             Depth = (Info >> 8) & 0xFF;
-            Program.LogVerbose("MipmapCount={0}, Depth={1}", MipmapCount, Depth);
+            Program.LogVerbose("Info={0}, MipmapCount={1}, Depth={2}", Info, MipmapCount, Depth);
             isYCbCr = (MipmapCount == 2 && Depth == 1) || (MipmapCount == 3 && Depth == 1);
             // todo? isEmcs -> MipmapCount++;
             uint[] textureOffsets = new uint[Textures.Length];
@@ -42,7 +42,10 @@ namespace TxpConvert {
                     if (j == 0 || ((j == 1 || j == 2) && isYCbCr)) {
                         long save = reader.BaseStream.Position;
                         reader.BaseStream.Seek(baseOffset + textureOffsets[k], SeekOrigin.Begin);
-                        Textures[k] = new TXP(reader);
+                        Textures[k] = new TXP(reader) {
+                            SubSetInfo = Info,
+                            SubSetIndex = k
+                        };
                         reader.BaseStream.Seek(save, SeekOrigin.Begin);
                     }
                     k++;

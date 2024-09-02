@@ -21,6 +21,8 @@ namespace TxpConvert {
         public TexFormat Format { get; private set; }
         public uint Index { get; private set; }
         public byte[] Data { get; private set; }
+        public uint SubSetInfo { get; internal set; }
+        public int SubSetIndex { get; internal set; }
 
         public TXP(BinaryReader reader) {
             Read(reader);

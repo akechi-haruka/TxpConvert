@@ -72,7 +72,8 @@ namespace TxpConvert {
             foreach (TXP tex in Textures) {
                 writer.Write(Program.MAGIC_TXP_SUBSET);
                 writer.Write((uint)1); // texture count
-                writer.Write((1 << 8) | 1); // info (mipmap count = 1, depth = 1)
+                writer.Write(tex.SubSetInfo);
+                // writer.Write((1 << 8) | 1); // info (mipmap count = 1, depth = 1)
                 writer.Write((uint)16); // offset
                 tex.SaveTXP(writer);
             }
