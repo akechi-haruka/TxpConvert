@@ -24,4 +24,4 @@ This will also create a "txp_metadata.ini", which contains information required 
 txpconvert create SetWithSubsets images texture.bin
 Repacks all textures from the folder "images" back to texture.bin.
 
-To pack and unpack the .farc containers, use FarcPack: https://github.com/blueskythlikesclouds/MikuMikuLibrary/releases
+To pack and unpack the .farc containers, use FarcPack: https://github.com/akechi-haruka/MikuMikuLibrary/releases
