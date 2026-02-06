@@ -2,15 +2,15 @@
   "profiles": {
     "Extract": {
       "commandName": "Project",
-      "commandLineArgs": "extract -v --v-flip L:\\SDVX\\kantai7\\rom\\sprite\\spr_gam_info\\texture.bin L:\\SDVX\\kantai7\\rom\\sprite\\spr_gam_info\\"
+      "commandLineArgs": "extract -v --v-flip \"G:\\SDVX\\fgo1151\\rom\\sprite\\spr_trial_svt_win\\texture.bin\" \"G:\\SDVX\\fgo1151\\rom\\sprite\\spr_trial_svt_win\\texture\" \"G:\\SDVX\\fgo1151\\rom\\sprite\\spr_trial_svt_win_table.bin\""
     },
     "Create": {
       "commandName": "Project",
-      "commandLineArgs": "create -f BC7 -v SetWithSubsets L:\\SDVX\\kantai7\\rom\\sprite\\spr_adv_cmn L:\\SDVX\\kantai7\\rom\\sprite\\spr_adv_cmn\\texture_repack.bin"
+      "commandLineArgs": "create SetWithSubsets -v  \"G:\\SDVX\\fgo1151\\rom\\sprite\\spr_trial_svt_win\\texture\" \"G:\\SDVX\\fgo1151\\rom\\sprite\\spr_trial_svt_win\\texture.bin\""
     },
-    "Extract Repack": {
+    "Extract Again": {
       "commandName": "Project",
-      "commandLineArgs": "extract -v --v-flip L:\\SDVX\\kantai7\\rom\\sprite\\spr_adv_cmn\\texture_repack.bin L:\\SDVX\\kantai7\\rom\\sprite\\spr_adv_cmn\\r"
+      "commandLineArgs": "extract -v --v-flip \"G:\\SDVX\\fgo1151\\rom\\sprite\\spr_trial_svt_win\\texture.bin\" \"G:\\SDVX\\fgo1151\\rom\\sprite\\spr_trial_svt_win\\texture2\" \"G:\\SDVX\\fgo1151\\rom\\sprite\\spr_trial_svt_win_table.bin\""
     }
   }
 }
